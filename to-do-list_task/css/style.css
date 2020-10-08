@@ -1,0 +1,53 @@
+body{
+    background: #4d244e;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Sansita Swashed', cursive;
+    border-top: 5px solid #aa8e8d;
+  }
+  /* title */
+  h1{
+      padding-bottom:  50px ;
+     font-family: 'Sansita Swashed', cursive !important;
+    color: #aa8e8d;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+  }
+.line-through{
+    text-decoration: line-through;
+    text-decoration-color: #2C3E50;
+}
+  label{
+      color:   #d37b79;
+      font-weight: bold;
+      font-family: 'Dancing Script', cursive;
+font-family: 'Sansita Swashed', cursive;
+  }
+
+#btn-add-task,
+#btn-edit-task{
+    background-color: #d37b79;
+    color: #4d244e;
+}
+
+#btn-edit{
+    background-color: #2C3E50 ;
+    color: #fff;
+}
+
+.list-group{
+    margin-bottom: 20px;
+}
+.list-group-item{
+    background:  #ae5f75;
+    border-bottom: 2px solid #2C3E50;
+    color: #fff;
+    
+    
+}
+
+.colors{
+    background: #6d335c; /* task-background*/
+    color: #f6bd66;  /*description color*/
+  color: #d37b79; /*title color*/
+}
