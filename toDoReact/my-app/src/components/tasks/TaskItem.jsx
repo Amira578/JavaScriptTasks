@@ -18,7 +18,7 @@ const TaskItem = ( {task,toggleDone}) => {
                 <div className="card-body">
                     <h5 className="card-title">{task.title}</h5>
                     <p className="card-text">{task.desc}</p>
-                    <button className={`btn btn-${task.isDone ? 'danger' : 'primary'} `} onClick={ toggleDone} >
+                    <button className= {`btn btn-${task.isDone ? 'danger' : 'primary'} `  } onClick={()=>toggleDone(task)} >
                         {task.isDone ? 'Re-open' : 'Done'} </button>
                         <button className='btn btn-secondary m-3 px-4' >Edit</button>
                 </div>

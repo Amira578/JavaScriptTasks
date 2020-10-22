@@ -57,13 +57,16 @@ export default class App extends React.Component {
        })
    }
 
-    toggleDone=()=>{
+    toggleDone=(task)=>{
+        const tasks = this.state.tasks.map(taskRow => {
+            if(taskRow.id == task.id) {
+                taskRow.isDone = !taskRow.isDone;
+            }
+            return task;
+        });
+        this.setState({tasks});
         
-    this.setState({
-        isDone:! this.state.tasks.isDone
-       });
-        
-}   
+    }   
    
    
 
@@ -99,12 +102,13 @@ export default class App extends React.Component {
 
                         </form>
                         </div>
-                            {this.state.tasks.map(function (task) {
-                                return (
-                                   <TaskItem key={task.id} task={task} toggleDone={this.toggleDone}/> 
 
-                                )
-                            })}
+                            {this.state.tasks.map(task=> 
+                                <TaskItem key={task.id} task={task} toggleDone={this.toggleDone}/> 
+
+                                
+                            )}
+
 
                     
                     </div>
