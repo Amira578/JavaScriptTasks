@@ -10,7 +10,7 @@ export const ListItem = (props)=>
     <li className="  list-group-item my-2">
            <div className="row">
         <div className=" col-md-8 container justify-content-center">
-       <h4> <Link to={`/task/${props.task.id}`}  >{props.task.title} </Link></h4>
+       <h4> <Link to={`/task/${props.task.id}`} >{props.task.title} </Link></h4>
         </div>
         <div className="col-md-4 text-right">
             <button className={`btn btn-${props.task.isDone ? 'danger' : 'success'} `  }

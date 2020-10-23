@@ -2,13 +2,13 @@ import React, { Fragment } from 'react';
 
 
 export const EditTask = props=>{
-
+  
  const task= props.findTask(props.match.params.id)
  
 return(
   <Fragment>
     <div className='container justify-content-center '>
-                <form onSubmit={()=>props.taskTitleEditHandler } className='container justify-content-center '>
+                <form onSubmit={e=>props.taskTitleEditHandler(e,props.match.params.id) } className='container justify-content-center '>
                     <div className="form-group">
                         <label htmlFor="title">Title</label>
                         <input type="text" className="form-control" id="taskEdit" value={props.taskEdit}

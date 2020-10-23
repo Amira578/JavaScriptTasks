@@ -142,11 +142,11 @@ class App extends Component {
     }
     //I want to pass the id of the task with the e 
     // Error e.preventDefault is not a function !!!!
-    taskTitleEditHandler = e => {
+    taskTitleEditHandler = (e,id) => {
         e.preventDefault();
         const tasks = this.state.tasks
         tasks.filter(task=>{
-             if( task.id==1){// id instead of 1
+             if( task.id==id){// id instead of 1
                  task.title=this.state.taskEdit
             }
         }
